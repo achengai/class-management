@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  color: #0f172a;
+  background-color: #f4f6fb;
+  font-size: 16px; /* 增大根字体大小 */
+}
+
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f4f6fb;
+  font-size: 15px; /* 增大body字体大小 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass-panel {
+  @apply rounded-2xl bg-white/80 backdrop-blur shadow-card border border-slate-100;
+}
+
+.seat-grid {
+  @apply w-full bg-white rounded-2xl shadow-card border border-slate-100 p-4;
+}
+
+/* 确保Tabs组件在各种缩放下都能正常显示 */
+.ant-tabs {
+  overflow: visible !important;
+}
+
+.ant-tabs-nav {
+  overflow: visible !important;
+}
+
+.ant-tabs-tab {
+  min-width: 80px !important;
+  padding: 8px 16px !important;
+  font-size: 16px !important;
+  white-space: nowrap !important;
+}
+
+.ant-tabs-tab-btn {
+  overflow: visible !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* 确保Select和Button在缩放时完全可见 */
+.ant-select {
+  overflow: visible !important;
+}
+
+.ant-select-dropdown {
+  z-index: 9999 !important;
+}
+
+.ant-btn {
+  overflow: visible !important;
+  white-space: nowrap !important;
+  min-width: fit-content !important;
+}
+
+/* 确保Space组件内容可见 */
+.ant-space {
+  overflow: visible !important;
+}
+
+.ant-space-item {
+  overflow: visible !important;
+}
+
+/* 确保Header区域内容完全可见 */
+.ant-layout-header {
+  overflow: visible !important;
+  z-index: 10 !important;
+  height: auto !important;
+  min-height: 110px !important;
+}
+
+/* 确保Content不与Header重叠 */
+.ant-layout-content {
+  position: relative !important;
+  margin-top: 0 !important;
+}
+
+/* 防止Tabs与Header重叠 */
+.ant-tabs-nav-wrap {
+  padding-top: 8px !important;
+}
+
+/* 增大全局字体大小 */
+.ant-table {
+  font-size: 15px !important;
+}
+
+.ant-table-thead > tr > th {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 15px !important;
+}
+
+.ant-btn {
+  font-size: 15px !important;
+}
+
+.ant-input {
+  font-size: 15px !important;
+}
+
+.ant-select {
+  font-size: 15px !important;
+}
+
+.ant-select-item {
+  font-size: 15px !important;
+}
+
+.ant-form-item-label > label {
+  font-size: 15px !important;
+}
+
+.ant-modal-title {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+.ant-modal-body {
+  font-size: 15px !important;
+}
+
+.ant-tag {
+  font-size: 14px !important;
+}
+
+.ant-card {
+  font-size: 15px !important;
+}
+
+.ant-card-head-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.ant-descriptions-item-label {
+  font-size: 15px !important;
+}
+
+.ant-descriptions-item-content {
+  font-size: 15px !important;
+}
+
+.ant-statistic-title {
+  font-size: 15px !important;
+}
+
+.ant-statistic-content {
+  font-size: 20px !important;
+}
+
+.ant-menu-item {
+  font-size: 15px !important;
+}
+
+.ant-drawer-title {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+.ant-drawer-body {
+  font-size: 15px !important;
+}
+
+.ant-message {
+  font-size: 15px !important;
+}
+
+.ant-notification-notice-message {
+  font-size: 16px !important;
+}
+
+.ant-notification-notice-description {
+  font-size: 15px !important;
+}
+
+.ant-popover-inner-content {
+  font-size: 15px !important;
+}
+
+.ant-tooltip-inner {
+  font-size: 14px !important;
+}
+
+/* 增大标题字体 */
+h1, .ant-typography h1 {
+  font-size: 32px !important;
+}
+
+h2, .ant-typography h2 {
+  font-size: 28px !important;
+}
+
+h3, .ant-typography h3 {
+  font-size: 24px !important;
+}
+
+h4, .ant-typography h4 {
+  font-size: 20px !important;
+}
+
+h5, .ant-typography h5 {
+  font-size: 17px !important;
+}
+
+/* 增大段落和文本 */
+p, .ant-typography {
+  font-size: 15px !important;
+}
+
+/* 确保统计卡片标题完整显示 */
+.ant-statistic-title {
+  white-space: normal !important;
+  word-break: keep-all !important;
+  line-height: 1.4 !important;
+  overflow: visible !important;
+}
+
+.ant-statistic {
+  overflow: visible !important;
+}
+
+.ant-card-body {
+  overflow: visible !important;
+  padding: 12px !important;
+}
+
+/* 确保左侧面板内容不被截断 */
+.ant-layout-sider {
+  overflow: visible !important;
+}
+
+/* 缩放容器优化 - 防止无限拉伸 */
+#app-container {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 确保body不会因为transform产生滚动条 */
+body {
+  overflow: auto;
+  position: relative;
+}
+
+/* 限制表格最大宽度，防止缩放时拉伸 */
+.ant-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* 确保表格列宽度固定，不自动拉伸 */
+.ant-table {
+  table-layout: fixed !important;
+}
+
+.ant-table-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 允许特定列换行显示 */
+.ant-table-cell .ant-space,
+.ant-table-cell .ant-tag {
+  white-space: normal;
+}
+
+/* 限制卡片和统计组件宽度 */
+.ant-card,
+.ant-statistic {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 确保Layout不会超出容器 */
+.ant-layout {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,23 @@
+{
+    "name": "SmartSeat 智能排座",
+    "short_name": "SmartSeat",
+    "description": "简单好用的智能班级座位管理系统",
+    "theme_color": "#6366f1",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "favicon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}
